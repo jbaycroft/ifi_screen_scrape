@@ -5,6 +5,10 @@ class PatentnosController < ApplicationController
   # GET /patentnos.json
   def index
     @patentnos = Patentno.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @patentnos.to_csv}
+    end
   end
 
   # GET /patentnos/1

@@ -52,7 +52,7 @@ class Scrapeparam < ActiveRecord::Base
 			page = agent.get(url)
 
 			#Define Nokogiri document
-			doc = Nokogiri::HTML(open(url, 'r', :read_timeout =>5*60))
+			doc = Nokogiri::HTML(open(url, 'r', :read_timeout =>20*60))
 
 			#Iterate through each link on the page to gather data specific to that link(case) 
 			#and to generate array of links for later use

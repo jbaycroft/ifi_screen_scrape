@@ -5,6 +5,10 @@ class CaseinfosController < ApplicationController
   # GET /caseinfos.json
   def index
     @caseinfos = Caseinfo.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @caseinfos.to_csv}
+    end
   end
 
   # GET /caseinfos/1
