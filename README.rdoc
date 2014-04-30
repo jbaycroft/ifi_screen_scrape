@@ -1,28 +1,29 @@
-== README
+== US ITC Case Screen Scraper == 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The primary codebase resides in the /app/models/scrapeparam.rb file. 
 
-Things you may want to cover:
+In order to use:
 
-* Ruby version
+  1. Set up your PostgreSQL database in the /config/database.yml 
+  2. Run 
+  		bundle install
+  		rake db:setup
+  3. Run your server
+  		(locally this would be rails c)
+  4. Navigate to your server location
+  		(locally this would be localhost:3000)
+  5. The two scripts can be run from this screen using the buttons at the top. 
+  		
+  		Screen Scrape will take approximately 5 minutes to run and will scrape all of the Case information into a flat table (Caseinfos)
 
-* System dependencies
+  		Index Patents will index the case information in a joined table (Patentnos). 
 
-* Configuration
+  		Note: These two tables are configured to have a many-to-many relationship. 
 
-* Database creation
+There are basic scaffolds set up for all models but are not configured to be able to sort or filter.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Additional functionality can be added upon request. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+

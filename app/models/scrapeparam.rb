@@ -2,16 +2,17 @@ class Scrapeparam < ActiveRecord::Base
 	
 	# Method for indexing case information by patent number
 	def self.index_patents
+		#Create an array of all Caseinfo files.
 		cases = Caseinfo::Caseinfo.all.to_a
-		# For indexing purposes create an array of all patent numbers
+		# Itterate through each case file.
 		cases.each do |c|
+			# For each case file create a patent number array that scans for patent numbers
 		    pnarray = c.patno.scan(/[\d,]+/)
-		    	puts pnarray
+		    	puts pnarray # Put array to log as a test.
+		    # For each patent number in the array create a new record that belongs to current case file. 
 		    pnarray.each do |pn|
 		    	c.patentnos.create(:patno => pn)
 		    end
-
-
     	end
 	end
 
