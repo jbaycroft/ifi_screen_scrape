@@ -19,7 +19,10 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: pg
+  host: YOUR_HOST
+  encoding: unicode
+  database: YOUR_DATABASE_NAME
   pool: 5
-  timeout: 5000
+  username: YOUR_DATABASE_USERNAME
+  password: YOUR_DATABASE_PASSWORD
