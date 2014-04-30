@@ -1,0 +1,79 @@
+<h1>Listing caseinfos</h1>
+<%= form_tag scrape_caseinfos_path, multipart: true do %>
+  <%= submit_tag "Scrape" %>
+<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Invno</th>
+      <th>Itmoc</th>
+      <th>Uain</th>
+      <th>Patno</th>
+      <th>Country</th>
+      <th>Respondents</th>
+      <th>Alj</th>
+      <th>Ouiiattorney</th>
+      <th>Gcattorney</th>
+      <th>Statusbeforecommission</th>
+      <th>Noticeofinv</th>
+      <th>Proceedtype</th>
+      <th>Currentphase</th>
+      <th>Invtermdate</th>
+      <th>Publishopinion</th>
+      <th>Relatedcourtdecision</th>
+      <th>Appealstatus</th>
+      <th>Disposition</th>
+      <th>Unfairactsfound</th>
+      <th>Notes</th>
+      <th>Activeexpiredremedial</th>
+      <th>Exclusioncdorders</th>
+      <th>Targetdate</th>
+      <th>Violationfinalduedate</th>
+      <th>Beginenddates</th>
+      <th>Archivist</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @caseinfos.each do |caseinfo| %>
+      <tr>
+        <td><%= caseinfo.invno %></td>
+        <td><%= caseinfo.itmoc %></td>
+        <td><%= caseinfo.uain %></td>
+        <td><%= caseinfo.patno %></td>
+        <td><%= caseinfo.country %></td>
+        <td><%= caseinfo.respondents %></td>
+        <td><%= caseinfo.alj %></td>
+        <td><%= caseinfo.ouiiattorney %></td>
+        <td><%= caseinfo.gcattorney %></td>
+        <td><%= caseinfo.statusbeforecommission %></td>
+        <td><%= caseinfo.noticeofinv %></td>
+        <td><%= caseinfo.proceedtype %></td>
+        <td><%= caseinfo.currentphase %></td>
+        <td><%= caseinfo.invtermdate %></td>
+        <td><%= caseinfo.publishopinion %></td>
+        <td><%= caseinfo.relatedcourtdecision %></td>
+        <td><%= caseinfo.appealstatus %></td>
+        <td><%= caseinfo.disposition %></td>
+        <td><%= caseinfo.unfairactsfound %></td>
+        <td><%= caseinfo.notes %></td>
+        <td><%= caseinfo.activeexpiredremedial %></td>
+        <td><%= caseinfo.exclusioncdorders %></td>
+        <td><%= caseinfo.targetdate %></td>
+        <td><%= caseinfo.violationfinalduedate %></td>
+        <td><%= caseinfo.beginenddates %></td>
+        <td><%= caseinfo.archivist %></td>
+        <td><%= link_to 'Show', caseinfo %></td>
+        <td><%= link_to 'Edit', edit_caseinfo_path(caseinfo) %></td>
+        <td><%= link_to 'Destroy', caseinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Caseinfo', new_caseinfo_path %>

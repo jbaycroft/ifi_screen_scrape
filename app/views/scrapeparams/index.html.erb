@@ -1,0 +1,29 @@
+<h1>Listing scrapeparams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Pages</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scrapeparams.each do |scrapeparam| %>
+      <tr>
+        <td><%= scrapeparam.url %></td>
+        <td><%= scrapeparam.pages %></td>
+        <td><%= link_to 'Show', scrapeparam %></td>
+        <td><%= link_to 'Edit', edit_scrapeparam_path(scrapeparam) %></td>
+        <td><%= link_to 'Destroy', scrapeparam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scrapeparam', new_scrapeparam_path %>

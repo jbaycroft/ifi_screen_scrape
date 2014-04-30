@@ -1,0 +1,121 @@
+<%= form_for(@caseinfo) do |f| %>
+  <% if @caseinfo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@caseinfo.errors.count, "error") %> prohibited this caseinfo from being saved:</h2>
+
+      <ul>
+      <% @caseinfo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :invno %><br>
+    <%= f.text_field :invno %>
+  </div>
+  <div class="field">
+    <%= f.label :itmoc %><br>
+    <%= f.text_field :itmoc %>
+  </div>
+  <div class="field">
+    <%= f.label :uain %><br>
+    <%= f.text_field :uain %>
+  </div>
+  <div class="field">
+    <%= f.label :patno %><br>
+    <%= f.text_field :patno %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :respondents %><br>
+    <%= f.text_field :respondents %>
+  </div>
+  <div class="field">
+    <%= f.label :alj %><br>
+    <%= f.text_field :alj %>
+  </div>
+  <div class="field">
+    <%= f.label :ouiiattorney %><br>
+    <%= f.text_field :ouiiattorney %>
+  </div>
+  <div class="field">
+    <%= f.label :gcattorney %><br>
+    <%= f.text_field :gcattorney %>
+  </div>
+  <div class="field">
+    <%= f.label :statusbeforecommission %><br>
+    <%= f.text_field :statusbeforecommission %>
+  </div>
+  <div class="field">
+    <%= f.label :noticeofinv %><br>
+    <%= f.text_field :noticeofinv %>
+  </div>
+  <div class="field">
+    <%= f.label :proceedtype %><br>
+    <%= f.text_field :proceedtype %>
+  </div>
+  <div class="field">
+    <%= f.label :currentphase %><br>
+    <%= f.text_field :currentphase %>
+  </div>
+  <div class="field">
+    <%= f.label :invtermdate %><br>
+    <%= f.text_field :invtermdate %>
+  </div>
+  <div class="field">
+    <%= f.label :publishopinion %><br>
+    <%= f.text_field :publishopinion %>
+  </div>
+  <div class="field">
+    <%= f.label :relatedcourtdecision %><br>
+    <%= f.text_field :relatedcourtdecision %>
+  </div>
+  <div class="field">
+    <%= f.label :appealstatus %><br>
+    <%= f.text_field :appealstatus %>
+  </div>
+  <div class="field">
+    <%= f.label :disposition %><br>
+    <%= f.text_field :disposition %>
+  </div>
+  <div class="field">
+    <%= f.label :unfairactsfound %><br>
+    <%= f.text_field :unfairactsfound %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :activeexpiredremedial %><br>
+    <%= f.text_field :activeexpiredremedial %>
+  </div>
+  <div class="field">
+    <%= f.label :exclusioncdorders %><br>
+    <%= f.text_field :exclusioncdorders %>
+  </div>
+  <div class="field">
+    <%= f.label :targetdate %><br>
+    <%= f.text_field :targetdate %>
+  </div>
+  <div class="field">
+    <%= f.label :violationfinalduedate %><br>
+    <%= f.text_field :violationfinalduedate %>
+  </div>
+  <div class="field">
+    <%= f.label :beginenddates %><br>
+    <%= f.text_field :beginenddates %>
+  </div>
+  <div class="field">
+    <%= f.label :archivist %><br>
+    <%= f.text_field :archivist %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

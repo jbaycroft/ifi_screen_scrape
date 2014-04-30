@@ -1,0 +1,21 @@
+<%= form_for(@patentno) do |f| %>
+  <% if @patentno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patentno.errors.count, "error") %> prohibited this patentno from being saved:</h2>
+
+      <ul>
+      <% @patentno.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :patno %><br>
+    <%= f.text_field :patno %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

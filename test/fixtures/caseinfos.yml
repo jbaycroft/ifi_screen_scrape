@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  invno: MyString
+  itmoc: MyString
+  uain: MyString
+  patno: MyString
+  country: 
+  respondents: MyString
+  alj: MyString
+  ouiiattorney: MyString
+  gcattorney: MyString
+  statusbeforecommission: MyString
+  noticeofinv: MyString
+  proceedtype: MyString
+  currentphase: MyString
+  invtermdate: MyString
+  publishopinion: MyString
+  relatedcourtdecision: MyString
+  appealstatus: MyString
+  disposition: MyString
+  unfairactsfound: MyString
+  notes: MyString
+  activeexpiredremedial: MyString
+  exclusioncdorders: MyString
+  targetdate: MyString
+  violationfinalduedate: MyString
+  beginenddates: MyString
+  archivist: MyString
+
+two:
+  invno: MyString
+  itmoc: MyString
+  uain: MyString
+  patno: MyString
+  country: 
+  respondents: MyString
+  alj: MyString
+  ouiiattorney: MyString
+  gcattorney: MyString
+  statusbeforecommission: MyString
+  noticeofinv: MyString
+  proceedtype: MyString
+  currentphase: MyString
+  invtermdate: MyString
+  publishopinion: MyString
+  relatedcourtdecision: MyString
+  appealstatus: MyString
+  disposition: MyString
+  unfairactsfound: MyString
+  notes: MyString
+  activeexpiredremedial: MyString
+  exclusioncdorders: MyString
+  targetdate: MyString
+  violationfinalduedate: MyString
+  beginenddates: MyString
+  archivist: MyString
