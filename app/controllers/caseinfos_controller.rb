@@ -64,7 +64,12 @@ class CaseinfosController < ApplicationController
   # Run Screenscrape Script from Model
   def scrape
     Scrapeparam::Scrapeparam.screen_scrape
-    redirect_to casinfos_url
+    redirect_to caseinfos_url
+  end
+  # Run Index Patent Numbers Script from Model
+  def index_patents
+    Scrapeparam::Scrapeparam.index_patents
+    redirect_to caseinfos_url
   end
 
   private

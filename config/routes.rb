@@ -1,6 +1,7 @@
 ScrapeApp::Application.routes.draw do
   resources :caseinfos do
     collection { post :scrape}
+    collection { post :index_patents}
   end 
 
   resources :patentnos

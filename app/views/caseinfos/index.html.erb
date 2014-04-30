@@ -2,6 +2,9 @@
 <%= form_tag scrape_caseinfos_path, multipart: true do %>
   <%= submit_tag "Scrape" %>
 <% end %>
+<%= form_tag index_patents_caseinfos_path, multipart: true do %>
+  <%= submit_tag "Index Patent Numbers" %>
+<% end %>
 <table>
   <thead>
     <tr>
