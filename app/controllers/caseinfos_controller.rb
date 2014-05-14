@@ -4,7 +4,7 @@ class CaseinfosController < ApplicationController
   # GET /caseinfos
   # GET /caseinfos.json
   def index
-    @caseinfos = Caseinfo.all
+    @caseinfos = Caseinfo.all.order(invno: :asc)
     respond_to do |format|
       format.html
       format.csv { send_data @caseinfos.to_csv}

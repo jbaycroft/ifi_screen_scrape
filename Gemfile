@@ -17,6 +17,8 @@ gem 'nokogiri'
 # Use Mechanize for page navigation
 gem 'mechanize'
 
+gem 'retryable'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
