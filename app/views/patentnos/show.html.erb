@@ -3,6 +3,11 @@
 <p>
   <strong>Patno:</strong>
   <%= @patentno.patno %>
+  <ul>
+  <% @patentno.caseinfos.each do |ci| %>
+  	<li><%= link_to ci.invno, caseinfo_path(ci)%> </li>
+  <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_patentno_path(@patentno) %> |

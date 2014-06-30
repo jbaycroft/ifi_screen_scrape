@@ -17,7 +17,7 @@
 
 <p>
   <strong>Patno:</strong>
-  <%= @caseinfo.patno %>
+  <% @caseinfo.patentnos.each do |pn| %>|<%= link_to pn.patno, patentno_path(pn) %>|<% end %>
 </p>
 
 <p>

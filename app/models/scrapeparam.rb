@@ -7,11 +7,11 @@ class Scrapeparam < ActiveRecord::Base
 		# Itterate through each case file.
 		cases.each do |c|
 			# For each case file create a patent number array that scans for patent numbers
-		    pnarray = c.patno.scan(/[\d,]+/)
+		    pnarray = c.patno.scan(/(\d{1,3},\d{1,3},\d{1,3})/)
 		    	puts pnarray # Put array to log as a test.
 		    # For each patent number in the array create a new record that belongs to current case file. 
 		    pnarray.each do |pn|
-		    	c.patentnos.create(:patno => pn)
+		    	c.patentnos.create(:patno => pn.to_s)
 		    end
     	end
 	end

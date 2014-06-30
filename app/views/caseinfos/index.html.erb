@@ -43,10 +43,10 @@
   <tbody>
     <% @caseinfos.each do |caseinfo| %>
       <tr>
-        <td><%= caseinfo.invno %></td>
+        <td><%= link_to caseinfo.invno, caseinfo_path(caseinfo) %></td>
         <td><%= caseinfo.itmoc %></td>
         <td><%= caseinfo.uain %></td>
-        <td><%= caseinfo.patno %></td>
+        <td><% caseinfo.patentnos.each do |pn| %>|<%= link_to pn.patno, patentno_path(pn) %>|<% end %></td>
         <td><%= caseinfo.country %></td>
         <td><%= caseinfo.respondents %></td>
         <td><%= caseinfo.alj %></td>
